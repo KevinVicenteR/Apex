@@ -3,10 +3,9 @@
 
 class PlacaXMotion {
 public:
-     
-    void inicializarPines() const;
-     
-    int leerInterruptores() const;
+  void inicializarPines() const;
+
+  int leerInterruptores() const;
 };
 
 #endif

@@ -3,10 +3,10 @@
 
 class IMotor {
 public:
-    virtual ~IMotor() {}
-     
-    virtual void mover(int velIzq, int velDer) = 0;
-    virtual void detener() = 0;
+  virtual ~IMotor() {}
+
+  virtual void mover(int velIzq, int velDer) = 0;
+  virtual void detener() = 0;
 };
 
 #endif

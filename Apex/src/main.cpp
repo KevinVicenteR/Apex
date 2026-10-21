@@ -18,9 +18,9 @@ ControladorRobot robot(percepcion, estrategia, controlMovimiento, motores);
 ModoCombate modo(placa, motores, percepcion, controlMovimiento, robot);
 
 void setup() {
-    modo.iniciar();
+  modo.iniciar();
 }
 
 void loop() {
-    modo.actualizar();
+  modo.actualizar();
 }

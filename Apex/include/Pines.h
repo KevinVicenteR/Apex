@@ -3,14 +3,14 @@
 
 #include <Arduino.h>
 
-constexpr uint8_t S_PISO_IZQ  = A1;
-constexpr uint8_t S_PISO_DER  = A2;
+constexpr uint8_t S_PISO_IZQ = A1;
+constexpr uint8_t S_PISO_DER = A2;
 
 constexpr uint8_t S_FRONT_IZQ = 2;
 constexpr uint8_t S_FRONT_CEN = 4;
 constexpr uint8_t S_FRONT_DER = A5;
-constexpr uint8_t S_LAT_IZQ   = 1;
-constexpr uint8_t S_LAT_DER   = A4;
+constexpr uint8_t S_LAT_IZQ = 1;
+constexpr uint8_t S_LAT_DER = A4;
 
 constexpr uint8_t PWMA = 10;
 constexpr uint8_t MA1A = 8;

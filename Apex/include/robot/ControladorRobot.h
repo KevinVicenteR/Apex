@@ -8,19 +8,21 @@
 
 class ControladorRobot {
 public:
-    ControladorRobot(IPercepcion& percepcion, IEstrategiaCombate& estrategia,
-                     IControlMovimiento& controlMovimiento, IMotor& motor);
-     
-    void actualizar();
-     
-    const LecturasSensores& ultimasLecturas() const { return lecturas; }
+  ControladorRobot(IPercepcion& percepcion, IEstrategiaCombate& estrategia,
+                   IControlMovimiento& controlMovimiento, IMotor& motor);
+
+  void actualizar();
+
+  const LecturasSensores& ultimasLecturas() const {
+    return lecturas;
+  }
 
 private:
-    IPercepcion& percepcion;
-    IEstrategiaCombate& estrategia;
-    IControlMovimiento& controlMovimiento;
-    IMotor& motor;
-    LecturasSensores lecturas{};
+  IPercepcion& percepcion;
+  IEstrategiaCombate& estrategia;
+  IControlMovimiento& controlMovimiento;
+  IMotor& motor;
+  LecturasSensores lecturas{};
 };
 
 #endif

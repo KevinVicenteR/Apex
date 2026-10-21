@@ -5,8 +5,8 @@
 
 class IPercepcion {
 public:
-    virtual ~IPercepcion() {}
-    virtual LecturasSensores leer() = 0;
+  virtual ~IPercepcion() {}
+  virtual LecturasSensores leer() = 0;
 };
 
 #endif

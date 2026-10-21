@@ -5,7 +5,7 @@ constexpr int VelocidadGiroRound4 = 120;
 constexpr unsigned long TiempoMaxGiroRound4 = 1000;
 
 constexpr int VelocidadGiroInicio = 180;
- 
+
 constexpr int VelocidadGiroRound2 = 150;
 constexpr unsigned long TiempoMaxGiroEspalda = 500;
 constexpr unsigned long TiempoMaxGiroLado = 500;

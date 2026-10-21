@@ -6,8 +6,8 @@
 
 class IControlMovimiento {
 public:
-    virtual ~IControlMovimiento() {}
-    virtual void ejecutar(const DecisionMovimiento& decision, IMotor& motor, unsigned long ahora) = 0;
+  virtual ~IControlMovimiento() {}
+  virtual void ejecutar(const DecisionMovimiento& decision, IMotor& motor, unsigned long ahora) = 0;
 };
 
 #endif

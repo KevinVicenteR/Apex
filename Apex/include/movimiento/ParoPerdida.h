@@ -6,21 +6,28 @@
 
 class ParoPerdida {
 public:
-     
-    bool continuar(const DecisionMovimiento& decision, MandoMotores& mando, IMotor& motor,
-                   unsigned long ahora);
+  bool continuar(const DecisionMovimiento& decision, MandoMotores& mando, IMotor& motor,
+                 unsigned long ahora);
 
-    void cancelar() { frenando = false; }
-     
-    void olvidar() { frenando = false; veniaAtacando = false; }
-     
-    void marcarAtaque() { frenando = false; veniaAtacando = true; }
+  void cancelar() {
+    frenando = false;
+  }
+
+  void olvidar() {
+    frenando = false;
+    veniaAtacando = false;
+  }
+
+  void marcarAtaque() {
+    frenando = false;
+    veniaAtacando = true;
+  }
 
 private:
-    bool veniaAtacando = false;
-    bool frenando = false;
-    unsigned long inicio = 0;
-    Freno freno;
+  bool veniaAtacando = false;
+  bool frenando = false;
+  unsigned long inicio = 0;
+  Freno freno;
 };
 
 #endif

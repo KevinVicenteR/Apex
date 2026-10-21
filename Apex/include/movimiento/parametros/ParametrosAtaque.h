@@ -5,7 +5,7 @@ constexpr int VelocidadAtaque = 130;
 constexpr int VelocidadEmpuje = 255;
 
 constexpr int VelocidadAtaqueDirecto = 0;
- 
+
 constexpr int VelocidadAtaqueVariosFrontales = 255;
 
 constexpr int PorcentajeAjuste = 85;

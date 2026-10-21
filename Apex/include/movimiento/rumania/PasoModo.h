@@ -7,20 +7,16 @@
 constexpr bool UsarModosRumania = true;
 
 struct PasoModo {
-    const DecisionMovimiento& decision;
-    MandoMotores& mando;
-    IMotor& motor;
-    unsigned long ahora;
-    unsigned long t;      
-    int lado;             
-    int visto;            
-    bool deFrente;        
+  const DecisionMovimiento& decision;
+  MandoMotores& mando;
+  IMotor& motor;
+  unsigned long ahora;
+  unsigned long t;
+  int lado;
+  int visto;
+  bool deFrente;
 };
 
-enum class ResultadoModo : unsigned char {
-    Sigue,       
-    Ataca,       
-    Termina      
-};
+enum class ResultadoModo : unsigned char { Sigue, Ataca, Termina };
 
 #endif

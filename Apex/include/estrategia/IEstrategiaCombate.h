@@ -6,8 +6,8 @@
 
 class IEstrategiaCombate {
 public:
-    virtual ~IEstrategiaCombate() {}
-    virtual DecisionMovimiento decidir(const LecturasSensores& lecturas) = 0;
+  virtual ~IEstrategiaCombate() {}
+  virtual DecisionMovimiento decidir(const LecturasSensores& lecturas) = 0;
 };
 
 #endif

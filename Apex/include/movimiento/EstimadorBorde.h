@@ -3,32 +3,42 @@
 
 class EstimadorBorde {
 public:
-    EstimadorBorde();
+  EstimadorBorde();
 
-    void colocar(float radio, float sigmaPos, bool mirandoAlCentro, float sigmaRumbo);
+  void colocar(float radio, float sigmaPos, bool mirandoAlCentro, float sigmaRumbo);
 
-    void predecir(int pwmIzq, int pwmDer, float dt, float empujon);
+  void predecir(int pwmIzq, int pwmDer, float dt, float empujon);
 
-    static float velocidadRegimen(int pwm);
+  static float velocidadRegimen(int pwm);
 
-    void lineaVista(int lado, bool avanzando);
+  void lineaVista(int lado, bool avanzando);
 
-    float distanciaLibre() const;
+  float distanciaLibre() const;
 
-    int limiteAvance() const;
+  int limiteAvance() const;
 
-    bool confiable() const;
+  bool confiable() const;
 
-    float x() const { return px; }
-    float y() const { return py; }
-    float rumbo() const { return th; }
-    float incertidumbrePosicion() const { return sigPos; }
-    float incertidumbreRumbo() const { return sigTh; }
+  float x() const {
+    return px;
+  }
+  float y() const {
+    return py;
+  }
+  float rumbo() const {
+    return th;
+  }
+  float incertidumbrePosicion() const {
+    return sigPos;
+  }
+  float incertidumbreRumbo() const {
+    return sigTh;
+  }
 
 private:
-    float px, py, th;      
-    float vIzq, vDer;      
-    float sigPos, sigTh;   
+  float px, py, th;
+  float vIzq, vDer;
+  float sigPos, sigTh;
 };
 
 #endif

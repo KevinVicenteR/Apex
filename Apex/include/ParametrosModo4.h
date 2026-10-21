@@ -3,7 +3,7 @@
 #include "Parametros.h"
 constexpr bool UsarRedLogica = true;
 constexpr bool UsarRedControl = true;
- 
+
 constexpr bool UsarPIDRed = false;
 
 constexpr bool UsarRedLogicaModo1 = true;

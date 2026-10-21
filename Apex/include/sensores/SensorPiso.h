@@ -5,28 +5,32 @@
 
 class SensorPiso {
 public:
-    SensorPiso(uint8_t pin, int negroInicial);
+  SensorPiso(uint8_t pin, int negroInicial);
 
-    int leer() const;
-     
-    void calibrar();
-     
-    void calibrar(int negro);
+  int leer() const;
 
-    bool hayLinea(int lectura);
-     
-    bool cercaDeLinea(int lectura) const;
+  void calibrar();
 
-    int negroCalibrado() const { return negro; }
-    int margenLinea() const { return margen; }
+  void calibrar(int negro);
+
+  bool hayLinea(int lectura);
+
+  bool cercaDeLinea(int lectura) const;
+
+  int negroCalibrado() const {
+    return negro;
+  }
+  int margenLinea() const {
+    return margen;
+  }
 
 private:
-    static int calcularMargen(int negro);
+  static int calcularMargen(int negro);
 
-    uint8_t pin;
-    int negro = 0;
-    int margen = 0;
-    bool enLinea = false;
+  uint8_t pin;
+  int negro = 0;
+  int margen = 0;
+  bool enLinea = false;
 };
 
 #endif

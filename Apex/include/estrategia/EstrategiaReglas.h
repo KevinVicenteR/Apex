@@ -3,9 +3,9 @@
 
 #include "estrategia/EstrategiaCombate.h"
 
-class EstrategiaReglas: public EstrategiaCombate {
+class EstrategiaReglas : public EstrategiaCombate {
 protected:
-    DecisionMovimiento elegirContraEnemigo(const LecturasSensores& lecturas) override;
+  DecisionMovimiento elegirContraEnemigo(const LecturasSensores& lecturas) override;
 };
 
 #endif

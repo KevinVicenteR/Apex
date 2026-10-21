@@ -6,30 +6,41 @@
 
 class BusquedaRival {
 public:
-    explicit BusquedaRival(int patronBusqueda = PatronBusqueda): patron(patronBusqueda) {}
+  explicit BusquedaRival(int patronBusqueda = PatronBusqueda) : patron(patronBusqueda) {}
 
-    void ejecutar(MandoMotores& mando, IMotor& motor, unsigned long ahora);
+  void ejecutar(MandoMotores& mando, IMotor& motor, unsigned long ahora);
 
-    void detener() { buscando = false; }
-     
-    void cancelar() { buscando = false; evasionCompleta = false; }
-     
-    void terminoEvasion(bool sinRival) { evasionCompleta = sinRival; }
+  void detener() {
+    buscando = false;
+  }
 
-    int sentido() const { return sentidoGiro; }
-    void fijarSentido(int sentidoNuevo) { sentidoGiro = sentidoNuevo; }
-     
-    void recordarLadoEnemigo(TipoAccion tipo);
+  void cancelar() {
+    buscando = false;
+    evasionCompleta = false;
+  }
+
+  void terminoEvasion(bool sinRival) {
+    evasionCompleta = sinRival;
+  }
+
+  int sentido() const {
+    return sentidoGiro;
+  }
+  void fijarSentido(int sentidoNuevo) {
+    sentidoGiro = sentidoNuevo;
+  }
+
+  void recordarLadoEnemigo(TipoAccion tipo);
 
 private:
-    void buscarEnArcos(MandoMotores& mando, IMotor& motor, unsigned long ahora);
-    void avanzarPorPulsos(MandoMotores& mando, IMotor& motor, unsigned long t);
+  void buscarEnArcos(MandoMotores& mando, IMotor& motor, unsigned long ahora);
+  void avanzarPorPulsos(MandoMotores& mando, IMotor& motor, unsigned long t);
 
-    int patron;
-    int sentidoGiro = 1;
-    bool buscando = false;
-    bool evasionCompleta = false;
-    unsigned long inicioBusqueda = 0;
+  int patron;
+  int sentidoGiro = 1;
+  bool buscando = false;
+  bool evasionCompleta = false;
+  unsigned long inicioBusqueda = 0;
 };
 
 #endif

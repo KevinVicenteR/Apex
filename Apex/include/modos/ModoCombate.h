@@ -10,33 +10,32 @@
 
 class ModoCombate {
 public:
-    ModoCombate(PlacaXMotion& placa, DriverMotores& motores, Percepcion& percepcion,
-                ControlMovimiento& controlMovimiento, ControladorRobot& robot);
+  ModoCombate(PlacaXMotion& placa, DriverMotores& motores, Percepcion& percepcion,
+              ControlMovimiento& controlMovimiento, ControladorRobot& robot);
 
-    void iniciar();      
-    void actualizar();   
+  void iniciar();
+  void actualizar();
 
 private:
+  void empezarCombate();
 
-    void empezarCombate();
-     
-    void reiniciarPlaca();
-     
-    void avisoListo(bool encendido);
-    void actualizarAvisoListo();
+  void reiniciarPlaca();
 
-    PlacaXMotion& placa;
-    DriverMotores& motores;
-    Percepcion& percepcion;
-    ControlMovimiento& controlMovimiento;
-    ControladorRobot& robot;
-    ModuloArranque moduloArranque;
-    bool enCombate = false;
-     
-    bool combateEmpezado = false;
-    unsigned long inicioCombate = 0;
-     
-    bool reiniciadaPorParada = false;
+  void avisoListo(bool encendido);
+  void actualizarAvisoListo();
+
+  PlacaXMotion& placa;
+  DriverMotores& motores;
+  Percepcion& percepcion;
+  ControlMovimiento& controlMovimiento;
+  ControladorRobot& robot;
+  ModuloArranque moduloArranque;
+  bool enCombate = false;
+
+  bool combateEmpezado = false;
+  unsigned long inicioCombate = 0;
+
+  bool reiniciadaPorParada = false;
 };
 
 #endif

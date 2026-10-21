@@ -6,23 +6,24 @@
 
 class SensorEnemigo {
 public:
-    SensorEnemigo(uint8_t pin, bool activoAlto);
+  SensorEnemigo(uint8_t pin, bool activoAlto);
 
-    bool detecta(unsigned long ahora);
+  bool detecta(unsigned long ahora);
 
-    void fijarPolaridad(bool activoAltoNuevo) { activoAlto = activoAltoNuevo; }
-     
-    void aprenderPolaridad();
-     
-    void reiniciarFiltro();
+  void fijarPolaridad(bool activoAltoNuevo) {
+    activoAlto = activoAltoNuevo;
+  }
+
+  void aprenderPolaridad();
+
+  void reiniciarFiltro();
 
 private:
-     
-    bool mayoriaAlta() const;
+  bool mayoriaAlta() const;
 
-    uint8_t pin;
-    bool activoAlto;
-    RetencionDeteccion filtro;
+  uint8_t pin;
+  bool activoAlto;
+  RetencionDeteccion filtro;
 };
 
 #endif

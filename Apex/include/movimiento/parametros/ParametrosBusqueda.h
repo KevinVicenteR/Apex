@@ -8,7 +8,7 @@ constexpr int PatronBusqueda = 1;
 constexpr int PorcentajeArcoBusqueda = 50;
 
 constexpr unsigned long TiempoArcoBusqueda = 1400;
- 
+
 constexpr unsigned long TiempoArranqueBusqueda = 400;
 
 constexpr unsigned long TiempoAvanceBusqueda = 1500;
